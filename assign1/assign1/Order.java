@@ -35,10 +35,11 @@ public class Order implements OrderDBInterface 	{
 		int i = 0;
 		try {
 			orderFile = new Scanner(new File(fileName));
-			  
+			 record = orderFile.nextLine();
 			
 			while(orderFile.hasNext()) {		
 				record = orderFile.nextLine();  
+				
 				order[orderCount] = new Order(record);
 				orderCount++;
 				if(i == 12) {
